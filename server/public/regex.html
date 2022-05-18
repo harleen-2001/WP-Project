@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let regex = /amit/;
+    console.log(regex);
+    console.log(regex.source);
+
+    let regex1 = /amit/;
+    let str1="My name is Amit";
+    let res1 = regex1.exec(str1);
+    console.log(res1);
+    if(res1)
+    {
+    console.log(res1.input);
+    console.log(res1.index);
+    }
+
+
+    let regex2 = /amit/i;
+    let str2="My name is Amit";
+    let res2 = regex2.exec(str2);
+    console.log(res2);
+    if(res2)
+    {
+    console.log(res2.input);
+    console.log(res2.index);
+    }
+
+    let regex3 = /amit/i;
+    let str3="His name is Amit and Rajan is a friend of amit";
+    let res3 = regex3.exec(str3);
+    console.log(res3);
+   
+    let res4 = regex3.exec(str3);
+    console.log(res4);
+
+    let regex5 = /amit/ig;
+    let str5="His name is Amit and Rajan is a friend of amit";
+    let res5 = regex5.exec(str5);
+    console.log(res5);
+   
+    let res6 = regex5.exec(str5);
+    console.log(res6);
+
+    let regex7 = /amit/ig;
+    let str7="Hey Amit, Amita, Amitabh";
+    let res7 = regex7.exec(str7);
+    console.log(res7);
+   
+    let res8 = regex7.exec(str7);
+    console.log(res8);
+   
+    let res19 = regex7.exec(str7);
+    console.log("CSE1"+res19);
+
+    let res9 = regex7.exec(str7);
+    console.log(res9);
+   
+     let regex10 = /amit/ig;
+    let str10="Hey Amit, Amita, Amitabh";
+    let indices = [];
+    let res10;
+
+
+    // while( res10 = regex10.exec(str10))
+    // {
+    //    indices.push(res10.index);
+    // }
+
+    res10 = regex10.exec(str10);
+    while( res10)
+    {
+       indices.push(res10.index);
+       res10 = regex10.exec(str10);
+    }
+    console.log(indices);
+
+
+    let regex11 = /amit/i;
+    let str11="Hey Amit, Fmita, Fmitabh";
+
+    let res11 = regex11.test(str11);
+    console.log(res11);
+
+
+    let regex12 = /amit/i;
+    let str12="Hey Amit, fmita, fmitabh";
+
+    let res12 = str12.match(regex12);
+    console.log(res12);
+
+
+    let regex13 = /fmit/ig;
+    let str13="Hey Amit, Amita, Amitabh";
+
+    let res13 = str13.match(regex13);
+    console.log(res13);
+
+
+    let regex14 = /amit/ig;
+    let str14="Hey Amit, Amita, Amitabh";
+
+    let res14 = str14.search(regex14);
+    console.log(res14);
+
+    let res15 = str14.search(regex14);
+    console.log(res15);
+
+   
+    let regex16 = /fmit/ig;
+    let str16="Hey Amit, Amita, Amitabh";
+
+    let res16 = str16.search(regex16);
+    console.log(res16);
+
+    let regex17 = /amit/ig;
+    let str17="Hey Amit, Amita, fmitabh";
+
+    let res17 = str17.replace(regex17, "hello");
+    console.log(res17);
+
+
+    // let regex18 = /^hey/i;
+    // let str18="Hey Amit, Amita, fmitabh";
+    // let res18 = regex18.test(str18);
+    // console.log(res18);
+   
+    // let regex18 = /amitabh$/i;
+    // let str18="Hey Amit, Amita, amitabh";
+    // let res18 = regex18.test(str18);
+    // console.log(res18);
+
+    // let regex18 = /h.y/i;
+    // let str18="Heky Amit, Amita, amitabh";
+    // let res18 = regex18.test(str18);
+    // console.log(res18);
+    // let regex18 = /h*y/i;
+    // let str18="Hy Amit, Amita, amitabh";
+    // let res18 = regex18.test(str18);
+    // console.log(res18);
+
+    // let regex18 = /he?y/i;
+    // let str18="Hydf Amit, Amita, amitabh";
+    // let res18 = regex18.exec(str18);
+    // console.log(res18);
+
+
+    let regex_181 = /^he*y/i;
+    let str_181="Heey Amit, Amita, amitabh";
+    let res_181 = regex_181.exec(str_181);
+    console.log(res_181);
+
+    let regex18 = /\d*y/i;
+    let str18="Keejjjyj Amit, Amita, amitabh";
+    let res18 = str18.match(regex18);
+    console.log(res18);
+
+    // let regex19= /\D*y/i;
+    // let str19="Keejjjyj Amit, Amita, amitabh";
+    // let res_19 = str19.match(regex19);
+    // console.log(res_19);
+
+
+   
+    // let regex19= /h(e+)y/i;
+    // let str19="heeeeey Amit, Amita, amitabh";
+    // let res_19 = regex19.exec(str19);
+    // console.log(res_19);
+
+
+    // let regex19= /\w\d-\D+/;
+    // let str19="Hello students A5-*&%ghhhh";
+    // let res_19 = regex19.exec(str19);
+    // console.log(res_19);
+   
+
+    // let regex19= /\w{1,3}\d-\D+/;
+    // let str19="Hello students Ajhjhhjjhhjhjhjjj5-*&%ghhhh";
+    // let res_19 = regex19.exec(str19);
+    // console.log(res_19);
+
+
+ 
+    // let str191 = "amit amittt ami amittt amik ami";
+    // let regex191 = /amit*/g;
+    // let res_191 = str191.match(regex191);
+    // console.log(res_191);
+
+    // let str19 = "amit amittt ami amittt amik ami";
+    // let regex19 = /amit?/g;
+    // let res_19 = str19.match(regex19);
+    // console.log(res_19);
+
+        // let str19 = "amit amittt ami amittt amik ami";
+    // let regex19 = /amit+/g;
+    // let res_19 = str19.match(regex19);
+    // console.log(res_19);
+
+    // let str19 = "good....good friend good Amit ia a good friend of aman";
+    // let regex19 = /good(?= friend)/g;
+    // let res_19 = str19.match(regex19);
+    // console.log(res_19);
+
+    // let str19 = "good....good friend good Amit ia a good friend of aman";
+    // let regex19 = /good(?! friend)/g;
+    // let res_19 = str19.match(regex19);
+    // console.log(res_19);
+
+    // let str19 = "amitgggg";
+    // let regex19 = /^.{5,}$/g;
+    // let res_19 = str19.match(regex19);
+    // console.log(res_19)
+   
+   
+    // w,W,d,D,s,S
+
+    // A*b123456775555-GH&JKL*&abcd
+   
+    // let regex19 = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[_]).{5,}$/;
+    // let str19="b111__H";
+    // let res=str19.match(regex19);
+    // console.log(res);
+
+   
+    // let str19 = "abc123AB_CD";
+    // let regex19 = /^(?=.+\d)(?=.+[A-Z])(?=.+[_])(?=.+[a-z]).{5,}$/g;
+    // let res_19 = str19.match(regex19);
+    // console.log(res_19);
+
+    // let str19 = "1Abh1111111__&111";
+    // let regex19 = /^(?=.*\d)(?=.+[A-Z])(?=.+[a-z])(?=.+[_]).{10,}$/g;
+    // let res_19 = str19.match(regex19);
+    // console.log(res_19);
+
+     
+    // let regex19= /^(?=.+\d)(?=.+[a-z])(?=.+[_])(?=.+[A-Z]).{10,}$/g;
+    // let str19="ab123c*AB___Cd";
+    // let res_19 = str19.match(regex19);
+    // console.log(res_19);
+
+
+   
+    </script>
+</body>
+</html>

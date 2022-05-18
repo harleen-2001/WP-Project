@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&quot; rel="stylesheet">
+<style>
+    .dropdownlist{
+        list-style-type: none;
+        background-color: antiquewhite;
+        display: inline-block;
+        padding: 50px;
+        font-size: 20px;
+        position: absolute;
+        right: 0;
+        z-index: 0;
+        display: none;
+    }
+
+    .menu-visible
+    {
+        display: block;
+    }
+    *{
+        margin-top: 0;
+    }
+    li{
+        margin: 15px;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .hamburger{
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+
+    .closeb{
+        display: none;
+    }
+</style>
+
+</head>
+
+<body>
+    <button class="hamburger">
+        <span class="material-icons menub">
+            menu
+            </span>
+            <span class="material-icons closeb">
+                close
+                </span>
+    </button>
+ <ul class="dropdownlist">
+     <li> <a href="">Home</a></li>
+     <li> <a href="">ECE</a></li>
+     <li> <a href="#cs">CSE</a></li>
+     <li> <a href="">ME</a></li>
+ </ul><br>
+ <br><br><br><br><br><br><br><br><br><br><br><br>
+ <br><br><br><br><br><br><br><br><br><br><br><br>
+ <h1 id="cs"> Dept of CSE</h1>
+ <p>BML Munjal University (BMU) seeks to transform higher education in India by creating a world-class, innovation-led, teaching, learning and research environment. Established in 2014 by the founders of the Hero Group and mentored by Imperial College London, BMU provides inter-disciplinary learning and transformative education that empowers students to become innovators, risk-takers and leaders who can take on the future.</p>
+<script>
+    let hamburger = document.querySelector(".hamburger");
+    let dropdownlist = document.querySelector(".dropdownlist");
+    let menub = document.querySelector(".menub");
+    let closeb = document.querySelector(".closeb");
+    hamburger.addEventListener("click", ()=>{
+        // dropdownlist.classList.toggle("menu-visible");
+        // if(menub.style.display == "block")
+        // {
+        //     closeb.style.display ="block";
+        //     menub.style.display ="none";
+        // }
+        // else
+        // {
+           
+        //     closeb.style.display ="none";
+        //     menub.style.display ="block";
+        // }
+
+        if(dropdownlist.classList.contains("menu-visible"))
+        {
+
+            dropdownlist.classList.remove("menu-visible");
+            menub.style.display= "block";
+            closeb.style.display = "none";
+        }
+        else
+        {
+            dropdownlist.classList.add("menu-visible");
+            menub.style.display= "none";
+            closeb.style.display = "block";
+
+        }
+   
+    });
+</script>
+</body>
+</html>

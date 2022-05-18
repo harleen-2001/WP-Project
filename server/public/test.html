@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/&gt>
+    
+    <style>
+    .time{font-size:25px}
+    .mybox{
+        background-color: antiquewhite;
+        display:inline-block ;
+        padding: 50px;
+
+    }
+    .time_btn
+    {
+        width: 50px;
+        margin: 10px;
+
+    }
+
+    .start{
+        background-color: green;
+    }
+
+    .stop
+    {
+        background-color: red;
+    }
+</style>
+</head>
+<body>
+    <div class="mybox">
+<span class="time minutes">00</span>
+<span class="time">:</span>
+<span class="time seconds">00</span>
+<button class="time_btn toggle ">
+    <span class="material-icons">
+        play_arrow
+        </span>
+</button>
+
+<button class="time_btn reset">
+    <span class="material-icons">
+    timer
+</span>
+</button>
+    </div>
+</body>
+
+<script>
+    let minutes = document.querySelector(".minutes");
+    let seconds = document.querySelector(".seconds");
+    let toggle = document.querySelector(".toggle");
+    let reset = document.querySelector(".reset");
+
+    let total_seconds_left = 0;
+
+    let intervalId =null;
+
+
+    reset.addEventListener("click", ()=>{
+        let inputime = prompt("For how many minutes you would like to set up the timer");
+        if(inputime<60)
+        {   total_seconds_left = inputime *60;
+            updateTime();   }
+    });
+    function updateTime()
+    {  let min = Math.floor(total_seconds_left /60);
+        let sec = total_seconds_left % 60;
+        minutes.textContent = min.toString().padStart(2,"0") ;
+        seconds.textContent = sec.toString().padStart(2,"0");
+    }
+
+    toggle.addEventListener("click", ()=>{
+        if(intervalId ==null)
+        {
+            startTimer();
+        }
+        else
+        {
+            stopTimer();
+        }
+
+
+    });
+
+function manageToggle()
+{
+    if(intervalId==null)
+    {
+                   //play, green
+        toggle.innerHTML = '<span class="material-icons">play_arrow</span>';    
+        toggle.classList.add("start");
+        toggle.classList.remove("stop");      
+
+    }
+    else
+    {
+          // pause, red
+         
+        toggle.innerHTML = '<span class="material-icons">pause</span>';    
+        toggle.classList.add("stop");
+        toggle.classList.remove("start");
+    }
+}
+
+function startTimer ()
+{
+
+    if(total_seconds_left ==0)
+    {
+        return;
+    }
+   intervalId  =setInterval(()=>{
+       total_seconds_left--;
+       updateTime();
+       if(total_seconds_left ==0)
+       {
+           stopTimer();
+       }
+
+
+   }, 1000);
+
+   manageToggle();
+}
+
+function stopTimer ()
+{
+    clearInterval (intervalId);
+    intervalId =null;
+    manageToggle();
+}
+
+</script>
+</html>

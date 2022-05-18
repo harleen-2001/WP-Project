@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wp_1.css">
+    <style>
+      /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); */
+      /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Source+Sans+Pro:wght@700&display=swap'); */
+      @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap');
+      .myDiv {
+         border: 5px solid black;
+         background-color:rgb(162, 161, 201);
+         text-align: center;
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+         height: 20vh;
+         padding: 0px;
+         /* justify-content:right; */
+        }
+        .myDiv div{
+          padding: 10px;
+        }
+        .mydiv2 {
+            border: 5px solid black;
+         background-color: rgb(162, 161, 201);
+         text-align: center;
+         display: flex;
+         font-size: large;
+         flex-direction: row;
+         width: 100%;
+         padding:0px;
+        }
+        .logo{
+          width: 100px;
+          height: 100px;
+          position : absolute;
+          left : 14px;
+      
+        }
+        .logo img{
+          width: 100px;
+          height: 100px;
+          border: 5px solid white;
+         /* position: sticky; */
+                 }
+        
+        #myVideo {
+           position:relative;
+           right: 0;
+           bottom: 0;
+           width: 100%;
+           height: 200%;
+           z-index: -1;
+           border: 5px solid black;
+}
+         .nav{
+           display: flex;
+           /* font-size: large; */
+           font-family: Merriweather, serif;
+           font-size:larger;
+           margin-top : 15px;
+           position:absolute;
+           right : 20vh;
+           cursor : pointer;
+           font-size : 30px;
+            }
+         .insta{
+           text-align: left;
+           display: inline-block;
+           width: 30%;
+         }
+         .absolute{
+           text-align: right;
+          width: 70%;
+         }
+         .services{
+           text-align: center;
+           font-size: 30px;
+           font-family: Merriweather, serif;
+           
+         }
+         .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+
+  color: black;
+  padding: 12px 16px;
+ 
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.pics{
+     display:grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,350px);
+    justify-content:space-around;
+    position: relative;
+  text-align:center;
+  color: black;
+ 
+  max-width: 800px; 
+  margin: 0 auto;
+    
+    
+}
+  .pics img{
+  width : 350px;
+  height : 250px;
+  border : 10px solid black;
+  opacity : 0.9;
+  
+ }
+   .pics img::before{
+    content:'Adventures in dining';
+      position : relative;
+      top : 10px;
+      right: 10px;
+      bottom:10px;
+      left : 0px;
+      background-color:transparent;
+      opacity : 0.3;
+      
+  } 
+ .pics .image1{
+         width : 350px;
+         height : 250px;
+         margin-top : 40px;
+         margin-left : 120px;
+         margin-right : 120px;
+         opacity: 0.9;
+         
+         
+        
+ }
+ .pics .image1 h3{
+   position : absolute;
+   background-color: black;
+   /* margin-top : -150px;
+   
+   margin-left : 85px; */
+   z-index:1;
+   text-align: center;
+   
+  /* bottom: 0; At the bottom. Use top:0 to append it to the top
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 10px;
+   
+
+ }
+ .nav a{
+   text-decoration: none;
+   color: black;
+   text-align: center;
+   
+ }
+ .image1{
+  position: relative;
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; 
+ }
+ .image1 .content{
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  /* padding: 20px;  */
+ }
+ .cont1{
+   text-align: center;
+   font-family:Merriweather, serif;
+   font-size: 30px;
+ }
+
+  /* .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+       </style>
+   
+        </head>
+     <body>
+    <div class="myDiv">
+      <div class="logo">
+        <img src="./tsc.png">
+      </div>
+      <div class="nav"> 
+        
+ <a href = "#content"><div><strong>ABOUT</strong> </div></a> 
+ 
+  <div > <a href="#cont1"><strong>WHY SOCIAL CLUB? </strong></a></div>
+  <div class="dropdown" >
+    <button class="dropbtn" style="color: black; font-family: Merriweather, serif; font-size: 30px;" ><strong>WHAT WE DO?</strong> 
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Special Events</a>
+      <a href="#">Meeting Management</a>
+      <a href="#">Virtual Experience</a>
+      <a href="#">Team building and givebacks</a>
+      <a href="#">Transportation</a>
+      <a href="#">Experimental Activities</a>
+      <a href="#">Adventure in dining</a>
+    </div>
+  </div> 
+  <div> <a href="#pi" ><strong> EVENTS SHOWCASE </strong></a></div>
+  <div><a href="./1.html"><strong> START PLANNING</strong></a></div>
+    </div>
+  </div>
+
+    <div>
+      <video autoplay muted loop id="myVideo">
+        <source src="./Welcome to my channel (1).mp4" type="video/mp4">
+      </video>
+      <div id="content">
+      <div class="services">
+       <p> <b>PROVIDING UNMATCHED SERVICES THAT BRING YOUR EVENTS TO LIFE</b><br><br>
+      At The Social Club, we design events and experiences of all sizes that exceed expectations and achieve goals.
+      We work successfully with clients and partners around the world to create and deliver amazing outcomes in virtual, hybrid, and in-person environments. 
+      Some of our services are below. We would love to connect with you, discuss your specific needs, and develop your next exceptional experience!</p>
+     </div>
+      <div class="pics" id="pi" >
+        <div class = "image1">
+       <img src="Fine-Dining (1).jpg" style="width:100%;">
+       <div class="content">
+        <h3>Adventures in Dining</h3>
+       </div>
+       
+      </div>
+      <div class = "image1">
+        <img src="./Hero_VR_StockPhoto_iStock_85477625_XLARGE.jpg" >
+        <div class="content">
+          <h3>Virtual Experince</h3>
+        </div>
+        
+      </div>
+      <div class = "image1">
+        <img src="./n-transporters-a-20180807.jpg" >
+        <div class="content">
+          <h3>Transportation</h3>
+        </div>
+        
+      </div>
+      <div class = "image1">
+        <img src="./conference-room.jpg" >
+        <div class="content">
+          <h3>Meeting Management</h3>
+        </div>
+        
+      </div>
+      <div class = "image1">
+        <img src="./Wedding-Decorations03_46_35.jpg" >
+        <div class="content">
+          <h3>Special Event and Custom Design</h3>
+        </div>
+       
+      </div>
+      <div class = "image1">
+        <img src="./climbing-training-royalty-free-image-828532530-1559595807.jpg">
+        <div class="content">
+          <h3>Team Building</h3>
+        </div>
+        
+      </div>
+      </div> 
+      
+      <div id="cont1" style="font-size: 30px; font-family: Merriweather, serif; text-align: center;">
+        <p> LAST YEAR 2021, WE THE WOMEN OF THIS GENERATION DECIDED TO LAUNCH A MORE SPECIFIC AND ORGANISED EVENT MANAGEMENT COMPANY; NAMED "THE SOCIAL CLUB" IN INDIA
+         WHICH WILL PROVIDE YOU MORE SPECIFIC AND CUSTOMER FRIENDLY EXPERIENCE AND WITH AN UNWAVERING MANTRA TO ALWAYS PUT CLIENTS FIRST</p>
+     
+      <p>
+          THE TSC DIFFERENCE
+     Innovation is at the core of our company. Our team offers fresh ideas and creative solutions, unmatched logistical expertise, and a deep local knowledge that is backed by national resources and leadership who support ingenuity.
+     We strive to consistently produce extraordinary, one-of-a-kind programming, serving as a one-stop resource for our clients, providing individualized service and attention to detail.
+     TSC is dedicated to being your strategic partner and a true extension of your team, tying the goals of your program to the authenticity of the destination.
+     No matter the size or scope of your event, we are excited to start planning!
+        </p>
+      </div>
+    
+  <div class="mydiv2">
+  
+    <div class="insta" > <img src="https://img.icons8.com/ios-glyphs/60/000000/instagram-new.png"/>
+      <img src="https://img.icons8.com/office/40/000000/facebook-new.png"/>
+      <img src="https://img.icons8.com/color/48/000000/twitter--v1.png"/>
+    </div>
+
+      <div class="absolute"><strong> +91-1023456789</strong><br>
+      <strong>thesocialclub@gmail.com</strong> </div>
+    
+  </div>
+
+ 
+</body>
+</html

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap');
+        body{background-color: rgb(228, 193, 181);}
+        .heading{
+            background-color:rgb(228, 193, 181);
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+        input{
+            width: 30%;     
+        height: 20px;
+        padding: 4px 10px;
+        border: 2px transparent #666;
+        background: #cce6ff;
+        color:black;
+        font-size: 16px;
+        }
+        .form{
+            text-align: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            display: inline-block;
+            color: black;
+            
+        }
+        .form1{
+            /* text-align: right; */
+            font-family: 'Times New Roman', Times, serif;
+        
+            font-size: 30px;
+            display: inline-block;
+            color: black;
+            
+
+        }
+        .form2{
+            text-align: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            color: black;
+        }
+        .Event-type{
+            text-align: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+
+
+        }
+        #html
+        {
+            display:inline;
+            width: 50px;
+        }
+
+
+        .myDiv {
+         border: 5px solid black;
+         background-color:rgb(162, 161, 201);
+         text-align: center;
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+         height: 20vh;
+         padding: 0px;
+         /* justify-content:right; */
+        }
+        .myDiv div{
+          padding: 10px;
+        }
+        .mydiv2 {
+            border: 5px solid black;
+         background-color: rgb(162, 161, 201);
+         text-align: center;
+         display: flex;
+         font-size: large;
+         flex-direction: row;
+         width: 100%;
+         padding:0px;
+        }
+        .logo{
+          width: 100px;
+          height: 100px;
+          position : absolute;
+          left : 14px;
+      
+        }
+        .logo img{
+          width: 100px;
+          height: 100px;
+          border: 5px solid white;
+         /* position: sticky; */
+                 }
+        
+        #myVideo {
+           position:relative;
+           right: 0;
+           bottom: 0;
+           width: 100%;
+           height: 200%;
+           z-index: -1;
+           border: 5px solid black;
+}
+         .nav{
+           display: flex;
+           /* font-size: large; */
+           font-family: Merriweather, serif;
+           font-size:larger;
+           margin-top : 15px;
+           position:absolute;
+           right : 20vh;
+           cursor : pointer;
+           font-size : 30px;
+            }
+         .insta{
+           text-align: left;
+           display: inline-block;
+           width: 30%;
+         }
+         .absolute{
+           text-align: right;
+          width: 70%;
+         }
+         .services{
+           text-align: center;
+           font-size: 30px;
+           font-family: Merriweather, serif;
+           
+         }
+         .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+
+  color: black;
+  padding: 12px 16px;
+ 
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.pics{
+     display:grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,350px);
+    justify-content:space-around;
+    position: relative;
+  text-align:center;
+  color: black;
+ 
+  max-width: 800px; 
+  margin: 0 auto;
+    
+    
+}
+  .pics img{
+  width : 350px;
+  height : 250px;
+  border : 10px solid black;
+  opacity : 0.9;
+  
+ }
+   .pics img::before{
+    content:'Adventures in dining';
+      position : relative;
+      top : 10px;
+      right: 10px;
+      bottom:10px;
+      left : 0px;
+      background-color:transparent;
+      opacity : 0.3;
+      
+  } 
+ .pics .image1{
+         width : 350px;
+         height : 250px;
+         margin-top : 40px;
+         margin-left : 120px;
+         margin-right : 120px;
+         opacity: 0.9;
+         
+         
+        
+ }
+ .pics .image1 h3{
+   position : absolute;
+   background-color: black;
+   /* margin-top : -150px;
+   
+   margin-left : 85px; */
+   z-index:1;
+   text-align: center;
+   
+  /* bottom: 0; At the bottom. Use top:0 to append it to the top
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 10px;
+   
+
+ }
+ .nav a{
+   text-decoration: none;
+   color: black;
+   text-align: center;
+   
+ }
+ .image1{
+  position: relative;
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; 
+ }
+ .image1 .content{
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  /* padding: 20px;  */
+ }
+ .cont1{
+   text-align: center;
+   font-family:Merriweather, serif;
+   font-size: 30px;
+ }
+    </style>
+</head>
+<body>
+    
+        <div class="myDiv">
+            <div class="logo">
+              <img src="./tsc.png">
+            </div>
+            <div class="nav"> 
+        
+                <a href = "#content"><div><strong>ABOUT</strong> </div></a> 
+                
+                 <div > <a href="#cont1"><strong>WHY SOCIAL CLUB? </strong></a></div>
+                 <div class="dropdown" >
+                   <button class="dropbtn" style="color: black; font-family: Merriweather, serif; font-size: 30px;" ><strong>WHAT WE DO?</strong> 
+                   </button>
+                   <div class="dropdown-content">
+                     <a href="#">Special Events</a>
+                     <a href="#">Meeting Management</a>
+                     <a href="#">Virtual Experience</a>
+                     <a href="#">Team building and givebacks</a>
+                     <a href="#">Transportation</a>
+                     <a href="#">Experimental Activities</a>
+                     <a href="#">Adventure in dining</a>
+                   </div>
+                 </div> 
+                 <div> <a href="#pi" ><strong> EVENTS SHOWCASE </strong></a></div>
+                 <div><a href="./1.html"><strong> START PLANNING</strong></a></div>
+                   </div>
+        </div>
+    <div class="heading">
+        <h1>Start Planning</h1>  
+         </div>
+         <form action="/action_page.php"></form>
+         <div class="form"> 
+        
+            <label for="fname"> Name:</label>
+            <input type="text" id="fname" Name="fname"><br><br>
+        </div>
+        <div class="form1">
+            <label for="lname">Phone No:</label>
+            <input type="text" id="lname" Phone No.="lname"><br><br>
+        </div>
+        <div class="form2">
+            <label for="fname"> E-mail:</label>
+            <input type="text" id="fname" E-mail="fname"><br><br>
+        </div>
+           
+          </form>
+        
+        <div class="Event-type"> 
+        <label for="Event type">Choose an Event: </label><br>
+
+
+ 
+
+
+ <input type="radio" id="html" name="fav_language" value="HTML">
+ <label for="html">Wedding</label><br>
+ <input type="radio" id="html" name="fav_language" value="CSS">
+ <label for="css">Co-operate Event</label><br>
+ <input type="radio" id="html" name="fav_language" value="JavaScript">
+ <label for="javascript">Non-profit Fundraiser</label><br>
+ <input type="radio" id="html" name="fav_language" value="HTML">
+ <label for="html">Trade-Show</label><br>
+ <input type="radio" id="html" name="fav_language" value="HTML">
+ <label for="html">Personal</label><br>
+ <input type="radio" id="html" name="fav_language" value="HTML">
+ <label for="html">Other</label><br><br>
+ 
+ <label for="fname"> Event Date:</label>
+ <input type="text" id="fname" Name="fname"><br><br>
+
+
+ <label for="fname"> Expenditure Range:</label>
+ <input type="text" id="fname" Name="fname"><br><br>
+ <label for="fname"> Estimated guest Count:</label>
+ <input type="text" id="fname" Name="fname"><br><br>
+ <label for="fname"> Additional Info:</label>
+ <input type="text" id="fname" Name="fname"><br><br>
+
+
+ <input type="submit" value="Submit" style="width: 100px;height: 30px; color: black;"> 
+
+
+ 
+ </div>
+    
+</body>
+</html>
